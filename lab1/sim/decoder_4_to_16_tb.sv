@@ -1,32 +1,33 @@
 `timescale 1ns/1ns
 
-`define SECOND 1000000000
-`define MS 1000000
+`define SECOND  1000000000
+`define MS      1000000
 
 module decoder_4_to_16_tb();
-    reg [3:0] addr;
-    wire [15:0] one_hot;
+    logic [3:0]     addr;
+    logic [15:0]    one_hot;
 
     decoder_4_to_16 DUT (
         .addr(addr),
         .one_hot(one_hot)
     );
 
-    integer i;
+    int i;
 
     initial begin
         `ifdef IVERILOG
             $dumpfile("decoder_4_to_16_tb.fst");
             $dumpvars(0, decoder_4_to_16_tb);
-        `endif
-        `ifndef IVERILOG
+        `else
             $vcdpluson;
         `endif
 
-        for (i = 0; i < 10; i = i + 1) begin
-            addr = $urandom % 16;
-            #(1);
-            assert(one_hot == 16'b1 << addr) else $fatal("Expected one_hot to be %b, but got %b for addr=%b", 16'b1 << addr, one_hot, addr);
+        for (i = 0; i < 10; i++) begin
+            addr = $urandom_range(15, 0);
+            #1ns;
+            assert(one_hot == (16'b1 << addr))
+                else $fatal(1, "Mismatch: addr=%0d one_hot=%b expected=%b",
+                            addr, one_hot, (16'b1 << addr));
         end
 
         $display("All tests passed!");
