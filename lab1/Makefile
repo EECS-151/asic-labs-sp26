@@ -42,4 +42,5 @@ clean: FORCE
 	rm -rf ./build $(junk) *.daidir sim/output.txt \
 	sim/*.tb sim/*.daidir sim/csrc \
 	sim/ucli.key sim/*.vpd sim/*.vcd \
-	sim/*.tbi sim/*.fst sim/*.jou sim/*.log sim/*.out
+	sim/*.tbi sim/*.fst sim/*.jou sim/*.log sim/*.out \
+	sim/*.fsdb
