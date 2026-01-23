@@ -1,0 +1,2 @@
+# asic-labs-sp26
+Welcome to the repository for EECS 151/251A Spring 2026 ASIC labs! This repository will contain all the lab skeleton code. Please refer to the [SP26 Website](https://inst.eecs.berkeley.edu/~eecs151/sp26/) for lab instructions.
