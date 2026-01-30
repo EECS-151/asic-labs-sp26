@@ -1,3 +1,5 @@
+`default_nettype none
+
 module addertree #(
     parameter int NUM_INPUT_BITS  = 4,
     parameter int NUM_OUTPUT_BITS = 16

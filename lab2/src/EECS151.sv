@@ -1,3 +1,5 @@
+`default_nettype none
+
 /* Standard include file for EECS151.
 
  The "no flip-flop inference" policy.  Instead of using flip-flop and

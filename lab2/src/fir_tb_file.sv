@@ -1,3 +1,5 @@
+`default_nettype none
+
 `timescale 1 ns / 100 ps
 
 module fir_tb_file();
