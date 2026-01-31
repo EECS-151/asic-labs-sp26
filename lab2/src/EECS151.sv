@@ -111,3 +111,5 @@ endmodule // RAM
 /*
  To add: multiple ports, synchronous read, ASIC synthesis support.
  */
+
+`default_nettype wire

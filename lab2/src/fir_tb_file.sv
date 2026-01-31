@@ -45,3 +45,5 @@ module fir_tb_file();
     end
 
 endmodule
+
+`default_nettype wire

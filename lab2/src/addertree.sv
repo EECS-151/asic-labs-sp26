@@ -15,3 +15,5 @@ module addertree #(
     assign Out = in0 + in4 + (in1 <<< 2) + (in3 <<< 2) + (in2 <<< 4);
 
 endmodule
+
+`default_nettype wire

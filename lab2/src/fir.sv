@@ -31,3 +31,5 @@ module fir #(
     );
 
 endmodule
+
+`default_nettype wire

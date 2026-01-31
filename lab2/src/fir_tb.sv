@@ -88,3 +88,5 @@ module fir_tb();
     end
 
 endmodule
+
+`default_nettype wire
